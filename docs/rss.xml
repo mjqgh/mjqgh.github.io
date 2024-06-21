@@ -1,28 +1,36 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>金权的博客</title><link>https://mjqgh.github.io</link><description>记录成长</description><copyright>金权的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://mjqgh.github.io</link></image><lastBuildDate>Thu, 20 Jun 2024 16:11:48 +0000</lastBuildDate><managingEditor>金权的博客</managingEditor><ttl>60</ttl><webMaster>金权的博客</webMaster><item><title>正则表达式总结</title><link>https://mjqgh.github.io/post/zheng-ze-biao-da-shi-zong-jie.html</link><description>【单字符】 巧记：我是单身狗。</description><guid isPermaLink="true">https://mjqgh.github.io/post/zheng-ze-biao-da-shi-zong-jie.html</guid><pubDate>Thu, 20 Jun 2024 16:02:12 +0000</pubDate></item><item><title>Pandas常用函数</title><link>https://mjqgh.github.io/post/Pandas-chang-yong-han-shu.html</link><description>## 筛选&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>金权的博客</title><link>https://mjqgh.github.io</link><description>记录成长</description><copyright>金权的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://mjqgh.github.io</link></image><lastBuildDate>Fri, 21 Jun 2024 01:37:14 +0000</lastBuildDate><managingEditor>金权的博客</managingEditor><ttl>60</ttl><webMaster>金权的博客</webMaster><item><title>正则表达式总结</title><link>https://mjqgh.github.io/post/zheng-ze-biao-da-shi-zong-jie.html</link><description>【单字符】 巧记：我是单身狗。</description><guid isPermaLink="true">https://mjqgh.github.io/post/zheng-ze-biao-da-shi-zong-jie.html</guid><pubDate>Thu, 20 Jun 2024 16:02:12 +0000</pubDate></item><item><title>Pandas常用函数</title><link>https://mjqgh.github.io/post/Pandas-chang-yong-han-shu.html</link><description>## 筛选&#13;
 ```python&#13;
 df.loc[哪些行, 哪些列]&#13;
 ```&#13;
 &#13;
 ## 对【列】的所有单元格处理&#13;
+```python&#13;
 df['A'].apply(func)&#13;
-&#13;
+```&#13;
 ## 对【df】的所有单元格处理&#13;
+```python&#13;
 df.applymap(func)&#13;
-&#13;
+```&#13;
 ## groupby+apply 万能聚合统计&#13;
 （可以理解为，把聚合后的每个df传递给apply函数进行聚合处理，function为自定义的聚合函数）&#13;
-df.groupby('列1').apply(function) # 详见【00】&#13;
-&#13;
+```python&#13;
+df.groupby('列1').apply(function) &#13;
+```&#13;
 ## 表匹配（注意保证一对一，避免出现一对多）&#13;
+```python&#13;
 pd.merge(df1, df2, left_on, right_on, how)&#13;
-&#13;
+```&#13;
 ## 表合并&#13;
+```python&#13;
 pd.concat([df1, df2])&#13;
-&#13;
+```&#13;
 ## 删除列&#13;
+```python&#13;
 df.drop(['A', 'B'], axis=1)&#13;
-&#13;
+```&#13;
 ## 重置索引&#13;
+```python&#13;
 df.reset_index(drop=True)  # 去掉原索引&#13;
-df.reset_index(drop=False)  # 默认，把原索引作为列保留。</description><guid isPermaLink="true">https://mjqgh.github.io/post/Pandas-chang-yong-han-shu.html</guid><pubDate>Thu, 20 Jun 2024 15:48:43 +0000</pubDate></item><item><title>groupby+apply万能聚合统计</title><link>https://mjqgh.github.io/post/groupby%2Bapply-wan-neng-ju-he-tong-ji.html</link><description>groupby 是Pandas中进行分组运算的函数，它能将数据集按照你需要的列进行分组。</description><guid isPermaLink="true">https://mjqgh.github.io/post/groupby%2Bapply-wan-neng-ju-he-tong-ji.html</guid><pubDate>Thu, 20 Jun 2024 14:17:04 +0000</pubDate></item><item><title>测试文章</title><link>https://mjqgh.github.io/post/ce-shi-wen-zhang.html</link><description>你好啊。</description><guid isPermaLink="true">https://mjqgh.github.io/post/ce-shi-wen-zhang.html</guid><pubDate>Thu, 20 Jun 2024 08:03:18 +0000</pubDate></item></channel></rss>
+df.reset_index(drop=False)  # 默认，把原索引作为列保留&#13;
+```。</description><guid isPermaLink="true">https://mjqgh.github.io/post/Pandas-chang-yong-han-shu.html</guid><pubDate>Thu, 20 Jun 2024 15:48:43 +0000</pubDate></item><item><title>groupby+apply万能聚合统计</title><link>https://mjqgh.github.io/post/groupby%2Bapply-wan-neng-ju-he-tong-ji.html</link><description>groupby 是Pandas中进行分组运算的函数，它能将数据集按照你需要的列进行分组。</description><guid isPermaLink="true">https://mjqgh.github.io/post/groupby%2Bapply-wan-neng-ju-he-tong-ji.html</guid><pubDate>Thu, 20 Jun 2024 14:17:04 +0000</pubDate></item><item><title>测试文章</title><link>https://mjqgh.github.io/post/ce-shi-wen-zhang.html</link><description>你好啊。</description><guid isPermaLink="true">https://mjqgh.github.io/post/ce-shi-wen-zhang.html</guid><pubDate>Thu, 20 Jun 2024 08:03:18 +0000</pubDate></item></channel></rss>

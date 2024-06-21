@@ -15,27 +15,35 @@ df.loc[哪些行, 哪些列]
 ```
 
 ## 对【列】的所有单元格处理
+```python
 df['A'].apply(func)
-
+```
 ## 对【df】的所有单元格处理
+```python
 df.applymap(func)
-
+```
 ## groupby+apply 万能聚合统计
 （可以理解为，把聚合后的每个df传递给apply函数进行聚合处理，function为自定义的聚合函数）
-df.groupby('列1').apply(function) # 详见【00】
-
+```python
+df.groupby('列1').apply(function) 
+```
 ## 表匹配（注意保证一对一，避免出现一对多）
+```python
 pd.merge(df1, df2, left_on, right_on, how)
-
+```
 ## 表合并
+```python
 pd.concat([df1, df2])
-
+```
 ## 删除列
+```python
 df.drop(['A', 'B'], axis=1)
-
+```
 ## 重置索引
+```python
 df.reset_index(drop=True)  # 去掉原索引
-df.reset_index(drop=False)  # 默认，把原索引作为列保留。">
+df.reset_index(drop=False)  # 默认，把原索引作为列保留
+```。">
 <meta property="og:title" content="Pandas常用函数">
 <meta property="og:description" content="## 筛选
 ```python
@@ -43,27 +51,35 @@ df.loc[哪些行, 哪些列]
 ```
 
 ## 对【列】的所有单元格处理
+```python
 df['A'].apply(func)
-
+```
 ## 对【df】的所有单元格处理
+```python
 df.applymap(func)
-
+```
 ## groupby+apply 万能聚合统计
 （可以理解为，把聚合后的每个df传递给apply函数进行聚合处理，function为自定义的聚合函数）
-df.groupby('列1').apply(function) # 详见【00】
-
+```python
+df.groupby('列1').apply(function) 
+```
 ## 表匹配（注意保证一对一，避免出现一对多）
+```python
 pd.merge(df1, df2, left_on, right_on, how)
-
+```
 ## 表合并
+```python
 pd.concat([df1, df2])
-
+```
 ## 删除列
+```python
 df.drop(['A', 'B'], axis=1)
-
+```
 ## 重置索引
+```python
 df.reset_index(drop=True)  # 去掉原索引
-df.reset_index(drop=False)  # 默认，把原索引作为列保留。">
+df.reset_index(drop=False)  # 默认，把原索引作为列保留
+```。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://mjqgh.github.io/post/Pandas-chang-yong-han-shu.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
@@ -125,21 +141,21 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <div class="markdown-body" id="postBody"><h2>筛选</h2>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">df</span>.<span class="pl-s1">loc</span>[<span class="pl-s1">哪些行</span>, <span class="pl-s1">哪些列</span>]</pre></div>
 <h2>对【列】的所有单元格处理</h2>
-<p>df["A"].apply(func)</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">df</span>[<span class="pl-s">"A"</span>].<span class="pl-en">apply</span>(<span class="pl-s1">func</span>)</pre></div>
 <h2>对【df】的所有单元格处理</h2>
-<p>df.applymap(func)</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">df</span>.<span class="pl-en">applymap</span>(<span class="pl-s1">func</span>)</pre></div>
 <h2>groupby+apply 万能聚合统计</h2>
-<p>（可以理解为，把聚合后的每个df传递给apply函数进行聚合处理，function为自定义的聚合函数）<br>
-df.groupby("列1").apply(function) # 详见【00】</p>
+<p>（可以理解为，把聚合后的每个df传递给apply函数进行聚合处理，function为自定义的聚合函数）</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">df</span>.<span class="pl-en">groupby</span>(<span class="pl-s">"列1"</span>).<span class="pl-en">apply</span>(<span class="pl-s1">function</span>) </pre></div>
 <h2>表匹配（注意保证一对一，避免出现一对多）</h2>
-<p>pd.merge(df1, df2, left_on, right_on, how)</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">pd</span>.<span class="pl-en">merge</span>(<span class="pl-s1">df1</span>, <span class="pl-s1">df2</span>, <span class="pl-s1">left_on</span>, <span class="pl-s1">right_on</span>, <span class="pl-s1">how</span>)</pre></div>
 <h2>表合并</h2>
-<p>pd.concat([df1, df2])</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">pd</span>.<span class="pl-en">concat</span>([<span class="pl-s1">df1</span>, <span class="pl-s1">df2</span>])</pre></div>
 <h2>删除列</h2>
-<p>df.drop(["A", "B"], axis=1)</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">df</span>.<span class="pl-en">drop</span>([<span class="pl-s">"A"</span>, <span class="pl-s">"B"</span>], <span class="pl-s1">axis</span><span class="pl-c1">=</span><span class="pl-c1">1</span>)</pre></div>
 <h2>重置索引</h2>
-<p>df.reset_index(drop=True)  # 去掉原索引<br>
-df.reset_index(drop=False)  # 默认，把原索引作为列保留</p></div>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">df</span>.<span class="pl-en">reset_index</span>(<span class="pl-s1">drop</span><span class="pl-c1">=</span><span class="pl-c1">True</span>)  <span class="pl-c"># 去掉原索引</span>
+<span class="pl-s1">df</span>.<span class="pl-en">reset_index</span>(<span class="pl-s1">drop</span><span class="pl-c1">=</span><span class="pl-c1">False</span>)  <span class="pl-c"># 默认，把原索引作为列保留</span></pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
 <div class="comments" id="comments"></div>
